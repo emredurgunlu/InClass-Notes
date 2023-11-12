@@ -1,0 +1,20 @@
+ampersant & içindeki elementi gösterir, örneğin;
+div{
+    color:blue;
+    &:hover{
+        color:yellow;
+    }
+}
+import ederken dosya önüne tri spnuna .scss koyma. 
+use "colors" as c
+
+importla eklenirse variable'lar global oluyor. Farklı scss dosyalarında aynı isimde variable varsa import problem olur. Sonra gelen ezer.
+Bu nedenle import yerine use kullan.
+
+mixing vs function farkı: function değer return eder. bu nedenle function hesaplama yapıp değer döndürmek için kullanılır. Function karmaşık yapılar için for döngüsü için felan kullanılır.
+eğer css stili döndüreceksen function değil, mixing kullan
+
+sass --watch scss/style.scss:css/style.css
+İKİ dosyayı da watch eder
+sass --watch scss/style.scss:css/style.css scss2/emre.scss:css2/emre.css
+sass --watch scss/style.scss:css/style.css emre.scss:emre.css 

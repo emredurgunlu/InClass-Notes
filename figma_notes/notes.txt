@@ -1,0 +1,50 @@
+ctrl + d nesne kopyalar
+alt nesne kopyalar
+ctrl + alt + c özellik kopyalar
+ctrl + alt + v özellik yapıştırır
+shift nesneyi düz bir şekilde sürükler veya en boy oranını koruyarak büyütüp küçültür
+shift + alt tuşuna basarak resmi büyütürsen merkezden büyütür.
+shift + x stroke ve fill özelliklerini yer değiştirir
+shift + del pen tool kullanırken seçili noktanın silinmesini sağlar
+spacebar handtoolun seçilmesini sağlar. ctrl + mouse scroll zoom yapar
+ctrl + g seçili nesneleri grup yapar
+İlk katmana veya ilk gruba tıklayıp shift basılı tutup son gruba veya katmana tıklarsan hepsini seçer.
+Birden fazla grup seçili olduğunda ctrl basılı tutup herhangi bir grubun en solundaki oka basarsan bütün grupların içlerini gösterir.
+alt + L içi açık bütün grupların içlerini kapaır.
+Grubun içindeki tüm nesneleri seçtikten sonra sağ tıklayıp rename yapabilirsin.
+
+Maskeleme işlemi yaparken layers bölümünde her zaman maske katmanı altta, maskelenecek olan katman yani resim üstte olmalı.
+1-Yıldız koy, resim koy. yıldıza tıkla yukarıdaki maskeleme simgesine tıkla.layers bölümünde resmi, mask grubun içine koy. Daha sonra resmi yıldızın üzerine sürükle.
+2-Yıldızı resmin üzerine sürükle. ikisini birden seç. maskele.
+
+Shift ile aynı hizadaki tüm nesneleri seçip sağ üstte disrubute horizontal spacing seçersen yatayda aralarındaki mesafeleri eşitler.(ders 21.contraints nedir ve nasıl kullanılır? dk5 bottom center seçersen foot'ırdaki ikonlar responsive olduğunda bozulmaz.)
+
+shift + a autolayout özelliğini açar
+10 olan otomatik boşluk için alt tuşuna basılı tutarsan alt ve üst veya sağ veya sol aynı anda değişir.
+ctrl + shift + g autolayout özelliğini kaldırır
+
+ctrl + ü layer öne gelir, ctrl + ğ layer arkaya gider. Bir text yazdın, üstüne dikdörtgen çizdin, yazıyı dikdörtgenin üstünde göstermek için kullanılabilir.
+ctrl + shift + ğ seçili nesneleri alt üst yer değiştirir.
+
+Frame içinde yazı ve icon var ise sağ-sol ok tuşlarıyla yerlerini değiştirebilirsin.
+
+Bir nesne seçtikten sonra shift basılı tuttarak başka bir nesne seçersen ikisi de seçili olur. Yani shift windowstaki dosya seçiminde ctrl gibi davranır.
+
+ctrl + alt + s versiyon sistemine kayıt eder.
+
+ctrl + alt + g seçili nesneleri frame içine alır.
+
+ctrl + e 3 parçadan oluşan indirilen vectör nesnesini tek parçada birleştirir. 
+
+*** https://storyset.com/
+*** https://wepik.com/
+
+ders 67-68-70-75-76
+
+https://dribbble.com/shots/3841326-Grab-your-cuppa
+https://dribbble.com/shots/13793065-BMW-Smart-App-Design
+
+
+
+
+

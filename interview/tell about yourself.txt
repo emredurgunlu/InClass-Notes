@@ -1,0 +1,15 @@
+Tell about yourself
+
+Hi. My name is Emre.
+I live in Turkey.
+I'm thirty five years old and married.
+I graduated with a degree in computer science at 2011.
+
+My first experience in the IT industry was working remotely as a freelance manual tester, which provided me with valuable insights about what could be the possible bugs of an application and how to detect it.
+
+For the past two years, I've been working as a remote Flutter developer. During this time, I've contributed to various projects that includes dekstop apps, android apps and responsive design for all devices.
+
+To become a more well-rounded developer, I'm currently enrolled in a comprehensive program at Clarusway, with the aim of becoming a full-stack developer. 
+
+I worked on many projects. You can see these on my github profile page.
+I am highly motivated and passionate about development. I find great satisfaction in solving problems, writing clean code and sharing the success with team members.

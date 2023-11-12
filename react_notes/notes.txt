@@ -1,0 +1,3 @@
+npm view react version
+npm version
+node --version
