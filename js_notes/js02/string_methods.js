@@ -41,8 +41,11 @@ console.log(yeniMetin);
                  split parçaladığı bölümleri diziye çevirir.
                  Bu sayede Array metodlarından join() ve reverse()  kullanabilirim */
 /* -------------------------------------------------------------------------- */
+console.log("********* split() ************");
 let metin3 = "Clarusway / It / Bootcamp";
-let splittedMetin3 = metin3.split("/");
+let splittedMetin3 = metin3.split(""); // bu şekilde harf herf böler
+console.log(splittedMetin3);
+splittedMetin3 = metin3.split("/"); // slash'tan böler
 console.log(splittedMetin3);
 metin3 = "Clarusway It Bootcamp";
 console.log(metin3.split(" ").join(" ")); //join() default olarak araya virgül koyar
@@ -74,51 +77,71 @@ console.log(variable1);
 console.log(`ataSoz'ünde Oku kelimesi geçiyor mu? ${ataSoz.includes("Oku")}`);
 
 //! indexOf (aranacak metin, konum)
-//? Bir karakter yada karakter grubumun kaçıncı sırada olduğunu yani index numarasını verir. 
+//? Bir karakter yada karakter grubumun kaçıncı sırada olduğunu yani index numarasını verir.
 //?Eğer o karakter yoksa olmadığını -1 değeri vererek gösterir. Büyük küçük harfe duyarlıdır. Sadece ilk gördüğünün index numarasını verir
 console.log(ataSoz.indexOf("u"));
 
 //! search() : bir string içindeki aranan elemanda ilk bulduğunun index numarasını yazar. Bulamazsa -1 dönderir.
-// Büyük küçük harfe duyarlıdır. 
+// Büyük küçük harfe duyarlıdır.
 
-let metin4=" Clarusway it bootcamp.Clarusway develop you IT field"
+let metin4 = " Clarusway it bootcamp.Clarusway develop you IT field";
 
 console.log(metin4.search("IT"));
 console.log(metin4.search("it"));
 
-// Regex ile çözüm bulunabilir ******************************************************
-// Regular Expression          ****************************************************** 
-//  Regex'de "" tırnak yerine / / kulllan. ******************************************
+/* -------------------------------------------------------------------------- */
+/*                             Regular Expression                             */
+/* -------------------------------------------------------------------------- */
+//  Regex'de "" tırnak yerine / / kulllan.
 
 //?   /g => global : bütün cümle için uygula
-//?   /i => case sensitive özelliğini kaldırKüçük büyük harfe bakmadan bul
+//?   /i => case sensitive özelliğini kaldır. Küçük büyük harfe bakmadan bul
 
 console.log(metin4.search(/IT/gi));
 
-let word="ynigÜn"
+let word = "ynigÜn";
 
 console.log(word.search(/ü/gi));
-console.log(word.replaceAll(/ü/gi,"i"));
+console.log(word.replaceAll(/ü/gi, "i"));
 
-console.log(word.search(/[aeiıouöü]/i)); // kelime içindeki ilk sesli harfin indexini verir
+console.log(word.search(/[aeiıouöü]/i)); // kelime içindeki ilk sesli harfin indexini verir []bu harflerden herhangi biri demek
+
+let text2 = "Is this his";
+let pattern = /Is/gi;
+let result = text2.match(pattern);
+console.log("result", result); // result [ 'Is', 'is', 'is' ]
+
+pattern = /^Is/gi; // ^ sadece en baştakini verir
+result = text2.match(pattern);
+console.log("result ^", result);
+
+pattern = /Is$/gi; // ^ sadece en sondakini verir
+result = text2.match(pattern);
+console.log("result $", result);
+
+/* \w is search for word characters that is  a-z, A-Z, 0-9, including _ (underscore). */
+console.log("elma12?*", "elma12?*".replace(/[\w]/g, "k")); // kkkkkk?* 
+console.log("elma12?*", "elma12?*".replace(/^[\w]/g, "k")); // klma12?* ^ sadece ilkine uyguladı
+console.log("elma12?*", "elma12?*".replace(/[^\w]/g, "k")); // elma12kk, "k" yerine "" olsaydı bir kelimedeki özel karakterleri kaldırmaya yarardı
 
 /* -------------------------------------------------------------------------- */
 /*                                   match()                                  */
 /* -------------------------------------------------------------------------- */
 // string içinde aranan metin bulunur ve bir dizi dönderir.
 
-let text="Merhaba bugün gerçekten çok sıcak bir Bugün"
+let text = "Merhaba bugün gerçekten çok sıcak bir Bugün";
 
 console.log(text.match(/bugün/gi)); // çıktı: [ 'bugün', 'Bugün' ]
 
-let say=text.match(/[ae]/gi) // içinde kaç adet a veya e harfi var
-console.log(say.length);
+let say = text.match(/[ae]/gi); // içindeki a veya e harfleri
+console.log("say", say); // say ['e', 'a', 'a','e', 'e', 'e','a']
+console.log(say.length); //7
 
 /* -------------------------------------------------------------------------- */
 /*                                    trim                                    */
 /* -------------------------------------------------------------------------- */
 
-let sentence1="     Clarusway  "
+let sentence1 = "     Clarusway  ";
 console.log(sentence1.trim());
 console.log(sentence1.trimStart());
 console.log(sentence1.trimEnd());
@@ -127,14 +150,14 @@ console.log(sentence1.trimEnd());
 /* -------------------------------------------------------------------------- */
 // startswith ve endswith true false değer dönderir
 
-metin="Clarusway"
+metin = "Clarusway";
 console.log(metin.toUpperCase().startsWith("C"));
 console.log(metin.toUpperCase().endsWith("Y"));
-
 
 //! ************STRING METHODS ************
 // String metodları () kullanılır.
 //? Chaining yani zincirleme olarak birden fazla metod birlikte kullanılabilir.
+// Metodların çoğu belki hepsi immutable ( kalıcı değişiklik yapmaz)
 //! -------------------------------------------------------------------------- */
 // charAt()             Returns the character at the specified index.
 // charCodeAt()	        Returns the Unicode of the character at the specified index.

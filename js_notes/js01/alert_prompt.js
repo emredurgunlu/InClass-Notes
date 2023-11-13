@@ -8,3 +8,6 @@ console.timeEnd("id"); // ikisi arasında çalışan kodların süresini yazdır
 const firstName = prompt("Please enter your name:"); // userdan string alır
 
 alert("browserda uyarı verir");
+
+const cevap = confirm("emin misin?");
+console.log("cevap", cevap);
