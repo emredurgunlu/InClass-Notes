@@ -70,3 +70,22 @@ console.log(team[0].name);
 team.forEach((t) => console.log(t.job));
 const names = team.map((t) => t["name"]);
 console.log(names);
+
+const sahislar = {
+  sahis1: {
+    name: "Can",
+    surname: "Canan",
+  },
+  sahis2: {
+    name: "John",
+    surname: "Sweet",
+  },
+};
+//? Objelerin key ve value'larini okumak icin built-in metotlar vardir.
+//? Bu mettotlar aslinda objelerin key ve/veya value'lari bir dizi olarak dondurur.
+// console.log(Object.keys(sahislar)); // [ 'sahis1', 'sahis2' ]
+// console.log(Object.values(sahislar)); // [{ name: 'Can', surname: 'Canan' },{ name: 'John', surname: 'Sweet' ]
+// console.log(Object.entries(sahislar)); // [[ 'sahis1', { name: 'Can', surname: 'Canan' } ], [ 'sahis2', { name: 'John', surname: 'Sweet' } ]]
+for (let key of Object.keys(sahislar)) {
+  console.log(key);
+}
