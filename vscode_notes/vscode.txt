@@ -1,4 +1,5 @@
 dosya > tercihler > ayarlar > word wrap on yaparsan editöre sığmayan uzun satırlar alta geçer uzayıp gitmez.
+(Veya View altında son seçenek word wrap)
 
 File > auto save on-off
 
@@ -22,11 +23,14 @@ alt+yukarı veya aşağı ok satırı taşır.
 shift+alt+yukarı veya aşağı ok satırı kopyalayıp yapıştırır.
 
 ctrl + d bi kelimeye çift tıkladıktan sonra aynılarını seçer
+
+sol taraftan bir dosyanın üstüne sağ tıklayıp "open in integrated terminal" dersen ilgili klasörde terminali açar
 ---------
 Github sayfasında noktaya basarsan vscode gibi görüntüler
 ---------
 .js dosyalarında clg yerine clo da kullanabilirsin
 
+win tuşu + nokta = emoji 
 
 
  
