@@ -30,7 +30,9 @@ console.log(h2.innerHTML); //? ADD NEW ITEM innerHTML Vanilla JS kullanılıyors
 h2.textContent = "ADD";
 h2.innerText = "ADD ITEM";
 h2.innerHTML = "<p>Deneme</p>"; // farklı olarak burası p elementi ekler içinde ise Deneme texti ekler
+
 //* Input elemanlarinin degeri value property'si ile degisir
+//* Input elemanlarinin içindeki text de value ile okunur
 document.getElementById("btn").value = "Submit";
 
 //*===========================================

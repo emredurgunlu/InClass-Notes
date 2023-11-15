@@ -1,70 +1,60 @@
+//* ------- YENI BIR ELEMENT OLUSTURMA 1. yöntem(CreateElement)------
 //? 1- yeni bir element olustur
-const myPar = document.createElement("p")
+const myPar = document.createElement("p"); // p elementi oluşturur, içi henüz boş ve DOM'a henüz eklenmemiş.
 
 //? 2- Eger text tabanlı bir element ise text dugumunu olustur
-const text = document.createTextNode("P elementi")
+const text = document.createTextNode("P elementi"); // DOM için text oluştur
 
 //? 3- Olusturulan text dugumunu yeni elemente bagla (append)
-myPar.appendChild(text)
+myPar.appendChild(text); // DOM için oluşturduğun texti oluşturduğun p elemanına bağla.
 
 //?4- Yeni olusan elementi DOM tree'ye ekle.
-const addItemSection = document.querySelector(".add-item")
-addItemSection.appendChild(myPar) //? add-item section'ın içine en alta p elementini ve yazısını ekler
+const addItemSection = document.querySelector(".add-item");
+addItemSection.appendChild(myPar); //? add-item section'ın içine ve (her zaman)en alta p elementini ve yazısını ekler
 
-//! Element.before()  ve Element.after() appenChild gibi aslında bir elementi DOM Tree'ye baglar.
-addItemSection.before(myPar) //? add-item section'ın hemen üzerine myPar'i baglar. Bu satır çalışınca bi üstteki appenChild iptal oldu,
-// yani aynı elementi iki kere bağlayamazsın, önceki bağlama iptal olur 
+//! Element.before()  ve Element.after() appenChild gibi aslında bir elementi DOM Tree'ye baglar ama child değil sibling bağlama olarak.
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/before
+addItemSection.before(myPar); //? add-item section'ın hemen üzerine myPar'i baglar. Bu satır çalışınca bi üstteki appenChild iptal oldu,
+// yani aynı elementi iki kere bağlayamazsın, önceki bağlama iptal olur
 
 //? React icerigine sahip olan li elementinin devamına yeni elemnti ekle
 // const reactLi = document.querySelector("ul li:nth-child(4)")
 // reactLi.after(myPar)
 
-// //* ------- ID, CLASS GIBI OZELLIKLERI ATAMA ------
-// //? 1) Yontem
-// myPar.id = "paragraf"
-// myPar.className = "red center"
-// myPar.name = "par"
-// myPar.type = "button"
+//* ------- YENI BIR ELEMENT OLUSTURMA 2. yöntem(InnerHTML) Pure JS için güvenli değil------
 
-// //? 2) Yontem (setAttribute)
-// myPar.setAttribute("id", "deneme")
-// myPar.setAttribute("type", "button")
-// myPar.setAttribute("class", "bg-warning border border-danger border-3")
+const ul = document.querySelector("ul");
 
-// //? 3) Yontem (classList)
-// myPar.classList.add("text-center")
+// += yaparsan var olanı silmeden üstüne ekler. Backtick kullanmak daha mantıklı
+ul.innerHTML += `<li id='deneme'>C++</li>
+  <li class="fw-bold">Java</li>
+  <li>Ruby</li>
+  <li>Asembly</li>
+`;
+/* -------------------------------------------------------------------------- */
+/*               ------- ID, CLASS GIBI OZELLIKLERI ATAMA ------              */
+/* -------------------------------------------------------------------------- */
+//? 1) Yontem
+myPar.id = "paragraf"; // myPar sonuç olarak bir element ve dolayısı ile bir obje, bu nedenle yeni key(id) ve value(paragraf) ekledik.
+myPar.className = "red center";
+myPar.name = "par";
+myPar.type = "button";
 
-// console.log(myPar.classList.contains("bg-warning"))
+//? 2) Yontem (setAttribute)
+myPar.setAttribute("id", "deneme");
+myPar.setAttribute("type", "button");
+myPar.setAttribute("class", "bg-warning border border-danger border-3"); // eğer zaten bir classı varsa onu silip üstüne yazar
 
-// if (myPar.classList.contains("border-danger")) {
-//   myPar.classList.remove("border-danger")
-//   myPar.classList.add("border-primary")
-// }
+//? 3) Yontem (classList) öncekini silmez üstüne ekler
+myPar.classList.add("text-center");
 
-// //? toggle metodu belitrilen class eger yok ise bu class'ı ekler
-// //? eger belirtilen class var ise bu class'ı kaldırır.
-// myPar.classList.toggle("text-danger")
+console.log(myPar.classList.contains("bg-warning"));
 
-//* ------- YENI BIR ELEMENT OLUSTURMA (InnerHTML)------
+if (myPar.classList.contains("border-danger")) {
+  myPar.classList.remove("border-danger");
+  myPar.classList.add("border-primary");
+}
 
-// const ul = document.querySelector("ul")
-
-// ul.innerHTML += `<li id='deneme'>C++</li>
-//   <li class="fw-bold">Java</li>
-//   <li>Ruby</li> 
-//   <li>Asembly</li>
-// `
-
-// const section3 = document.createElement("section")
-// document.querySelector("main").appendChild(section3)
-
-// section3.innerHTML = `
-//     <div class="card" style="width: 14rem;">
-//       <img src="https://cdn.pixabay.com/photo/2023/10/27/12/13/vineyard-8345243_1280.jpg" class="card-img-top" alt="img">
-//       <div class="card-body">
-//         <h5 class="card-title">Card title</h5>
-//         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-//         <a href="#" class="btn btn-primary">Go somewhere</a>
-//       </div>
-//     </div>
-// `
+//? toggle metodu belitrilen class eger yok ise bu class'ı ekler
+//? eger belirtilen class var ise bu class'ı kaldırır. Yani yukardaki if bloğunu yapar
+myPar.classList.toggle("text-danger");
