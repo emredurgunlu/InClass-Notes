@@ -1,4 +1,6 @@
-//? default parametre ile bos bırakılan parametre yerine bir deger atanmis olunur. fonksiyon yukarı taşınıyor - hoisted
+//? default parametre ile bos bırakılan parametre yerine bir deger atanmis olunur. 
+// Bu çeşit orjinal syntax fonksiyon yukarı taşınıyor - hoisted.
+// FAKAT Arrow Function ve function expression hoisted olmaz. Bu nedenle dosyanın en başında değişken tanımlamalarının olduğu yerde tanımla bunları.
 yazdir();
 yazdir("merhaba", "emre");
 function yazdir(lang = "Hello", name = "noname") {

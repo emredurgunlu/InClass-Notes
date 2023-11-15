@@ -1,0 +1,2 @@
+process kol ise thread parmaklar
+bağlantı sonlandırma veya timeot bitirme işlemleri finally de yapılabilir
