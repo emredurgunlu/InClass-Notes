@@ -42,3 +42,4 @@ req
   .then((x) => console.log(x.name)) //? zincirleme olarak kullanmak mümkündür.
   .catch((err) => document.write(err)) //? hatayı handle etmek için catch kullanılr.
   .finally(() => console.log("Her türlü calisir.")); //? baglaniyi sonlandirma
+  // bağlantı sonlandırma veya timeout bitirme işlemleri finally de yapılabilir
