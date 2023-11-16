@@ -20,11 +20,12 @@ const htmlLi = document.querySelector("ul li:nth-child(1)")
 console.log(htmlLi.parentNode.parentNode.parentNode) //? main
 console.log(htmlLi.parentElement.parentElement.parentElement) //?main
 
-//? closest() metodu root yonundeki ilk uygun olan parent'i secer
+//? closest() metodu root yonundeki ilk uygun olan parent'i secer.
 console.log(htmlLi.closest("section")) //? en yakın section parent'ı bulur
 
-console.log(htmlLi.closest("main").querySelector("#add-new-item")) //? en yakın main'i bul icersindeki adnew-item idli elementi sec
-
+console.log(htmlLi.closest("main").querySelector("#add-new-item").textContent) //? en yakın main'i bul icersindeki adnew-item idli elementi sec
+// Ortak atayı bul, oradan ilgili elementi seç. Bubling yaparken bu kullanılabilir
+ 
 //* 2- Asagi Yonde traverse
 //*----------------------------------------------
 //? Children, firstElementChild, lastElementChild

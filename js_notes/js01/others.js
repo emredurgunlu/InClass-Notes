@@ -11,3 +11,13 @@ alert("browserda uyarı verir");
 
 const cevap = confirm("emin misin?");
 console.log("cevap", cevap);
+
+localStorage.setItem("harvey", 999); // local veri depolama
+console.log(localStorage.getItem("harvey")); // 999
+
+// const passwordValue = document.getElementById("password");
+// const copyEvent = document.getElementById("copy");
+// copyEvent.addEventListener("click", copyPassword);
+// const copyPassword = () => {
+  navigator.clipboard.writeText(passwordValue.innerText); // browserdaki bir texti kopyalar
+// };

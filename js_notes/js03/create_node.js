@@ -5,6 +5,8 @@ const myPar = document.createElement("p"); // p elementi oluşturur, içi henüz
 //? 2- Eger text tabanlı bir element ise text dugumunu olustur
 const text = document.createTextNode("P elementi"); // DOM için text oluştur
 
+// e.target.closest(".product").remove(); ilgili elementi domdan kaldırır
+
 //? 3- Olusturulan text dugumunu yeni elemente bagla (append)
 myPar.appendChild(text); // DOM için oluşturduğun texti oluşturduğun p elemanına bağla.
 
@@ -47,6 +49,8 @@ myPar.setAttribute("class", "bg-warning border border-danger border-3"); // eğe
 
 //? 3) Yontem (classList) öncekini silmez üstüne ekler
 myPar.classList.add("text-center");
+myPar.classList.remove("text-center");
+if(myPar.classList.contains("text-center")){}
 
 console.log(myPar.classList.contains("bg-warning"));
 

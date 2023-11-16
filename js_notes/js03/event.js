@@ -1,3 +1,4 @@
+// 4 farkılı yöntemle yapılabilir
 //1. ve 2. yöntemde event html içine yazılıyor. Bu istenen bişey değil 
 //? Selector variables
 const header = document.querySelector("header")
@@ -5,7 +6,7 @@ const addButton = document.getElementById("btn")
 const input = document.querySelector("#input")
 const ul = document.querySelector("ul")
 
-//? 3. yontemle event tanimlandi
+//? 3. yontem: ilgili element nokta "on" ve event adı eşittir fonksyon
 //* mouse header 'ın üzerine geldiginde ilgili function cagrilir.
 header.onmouseover = function () {
   header.style.backgroundColor = "red"

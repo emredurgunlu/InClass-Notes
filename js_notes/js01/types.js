@@ -16,7 +16,7 @@ console.log(typeof NaN); //? number
 console.log(isNaN(5)); //? false
 console.log(isNaN("5")); //? flase
 console.log(isNaN("emre")); //? true
-
+console.log("!isNaN() ", !isNaN()); // bu bir sayı mı anlamındadır
 
 
 console.log(new Date().getFullYear()); // sistem zamanına göre

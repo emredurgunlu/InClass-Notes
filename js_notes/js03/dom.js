@@ -96,6 +96,7 @@ console.log(document.querySelector("ul li:nth-child(4)").innerText); // "React" 
 //* ========================================
 const itemLists = document.querySelectorAll("section.item-list li");
 console.log(itemLists); //? NodeList(5) [li.list, li.list, li.list, li.list, li.list]
+//NodeListi arraye çevirmek için: [...itemLists].map().reduce()
 
 //* querySelectorAll bir nodelist dondurur. Nodelist dahali olarak forEach metmodunu barindirir. Ama istenirse spread veya Array.from() ile yine Array'e donusum yapilabilir.
 
