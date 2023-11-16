@@ -15,3 +15,6 @@ https://www.gratispng.com/
 https://cdnjs.com/libraries/font-awesome
 https://fontawesome.com/icons
 https://www.flaticon.com/
+
+Kodlar:
+https://gist.github.com/bschwartz757/5d1ff425767fdc6baedb4e5d5a5135c8

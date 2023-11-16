@@ -20,3 +20,5 @@ function myFunc() {
 }
 undefined çıktısı verir çünkü "var myNum" myFunc içinde en üst satıra alınsa bile sadece tanımlanması alınır ama 30 değer ataması en üste alınmaz.
 Eğer üstteki "setEnd()" örneğindeki gibi var yazmasaydı tanımlanma; myFunc içinde en üst satıra değilde dosyanın en üst satırlarına alınırdı.
+
+callback bir fonksyon içinde parametre olarak çağırılan başka bir fonsyon

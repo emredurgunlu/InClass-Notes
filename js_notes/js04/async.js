@@ -1,13 +1,6 @@
-//* 1- Promise (Custom async kod yazmak için elverişli- Advance)
-//! 2- Fetch API (Promise'in basitlestirilmis hali),
-//! 3- ASYNC-AWAIT (Fetch API'nin makyajlanmis hali)
+// async-await ile fetch'deki .then() zincirlemesinden kurtuluyorsun
 
-setTimeout(() => {
-  console.log("timeout doldu");
-}, 5000); //?  500ms sonra tetikleme olur.
-console.log("emre");
-
-let i = 0;
+/* let i = 0;
 const zaman = setInterval(() => {
   console.log(++i);
   if (i >= 10) {
@@ -15,37 +8,60 @@ const zaman = setInterval(() => {
   }
 }, 100); // şu kadar ms'de bir periyodik olarak çalışır
 
-// let url= 'https://api.github.com/users'
-let url = "https://randomuser.me/api/";
-fetch(url)
-  .then((res) => res.json())
-  .then((data) => console.log(data.results[0].name.first));
+// async-await kullanıyorsan then kullanıp zincir yapmana gerek kalmıyor
+const deneme = async () => {
+  try {
+    const res = await fetch("https://api.github.com/users");
+    const data = await res.json();
+    console.log(data[0].login);
+  } catch (error) {
+    console.log("hata aldik", error);
+  }
+};
+deneme(); */
 
-//? fetch() fonksiyonu veri getirmek istediginiz kaynagin yolunu gosteren zorunlu
-//? bir parametre almaktadir ve bu istegin cevabini gosteren bir Promise dondurmektedir.
+const getNews = async () => {
+  const API_KEY = "c118dde6651a44d3a294ce40620b5c83";
+  const BASE_URL = "https://newsapi.org/v2/";
+  const queryString = "top-headlines?country=us&category=sport&pageSize=20&page=1&";
 
-let veri = "";
-fetch("https://api.github.com/users")
-  .then((res) => {
-     console.log(res)
-    if (!res.ok) { // https://developer.mozilla.org/en-US/docs/Web/API/Response
-      //? Fetch api'da hatayi bizim yakalamiz gerekiyor.
-      throw new Error(`Hata: ${res.status}`); //? bir hata firlatiyoruz
+  // const res = await fetch(`https://newsapi.org/v2/top-headlines?country=tr&category=sport&apiKey=c118dde6651a44d3a294ce40620b5c83`)
+
+  try {
+    const res = await fetch(`${BASE_URL}${queryString}apiKey=${API_KEY}`);
+    //? Error handling
+    if (!res.ok) { // eğer Unauthorized hatası varsa örneğin apı key yanlış ise try bloğu çalışmaya devam eder. Bu nedenle çalışmaya devam etmemesi için bu şekilde bir kontrol ekliyoruz
+      throw new Error(`Something went wrong:${res.status}`);
     }
-    return res.json();
-  })
-  .then((data) => {
-    show(data);
-  })
-  .catch((err) => document.write("hata sebebi: ",err)); // linkin sonundaki s harfini silersen hata verir ve document.write() ile ekrana yazdırır
+    const data = await res.json();
+    renderNews(data.articles);
+  } catch (error) { // throw'un gönderdiğini yakalıyor veya try bloğu içinde hata yakalanmışsa onu gösteriyor
+    const newsDiv = document.getElementById("news-div");
+    newsDiv.innerHTML = `
+          <h2>${error}</h2>
+      `;
+  }
+};
+const renderNews = (news) => {
+  const newsDiv = document.getElementById("news-div");
 
-function show(users) {
-  const userSection = document.getElementById("users");
-  users.forEach((user) => {
-    userSection.innerHTML += `
-            <h1>${user.login}</h1>
-            <img src="${user.avatar_url}" width="200px" alt="" />
-            <p><a href="${user.html_url}" target="_blank">URL</a></p> 
-        `;
+  news.forEach((item) => {
+    const { title, urlToImage, url, content } = item;
+    newsDiv.innerHTML += `
+      <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card">
+              <img src="${urlToImage}" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">${title}</h5>
+                  <p class="card-text">${content}</p>
+                  <a href="${url}" target="_blank" class="btn btn-primary">Detail</a>
+              </div>
+          </div>
+      </div>
+      `;
   });
-}
+};
+
+window.addEventListener("load", () => {
+  getNews();
+});
