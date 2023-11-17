@@ -15,6 +15,9 @@ console.log("cevap", cevap);
 localStorage.setItem("harvey", 999); // local veri depolama
 console.log(localStorage.getItem("harvey")); // 999
 
+// localStorage.clear() // tüm local storage siler
+// localStorage.removeItem("gelirler"); // sadece gelirleri siler
+
 // const passwordValue = document.getElementById("password");
 // const copyEvent = document.getElementById("copy");
 // copyEvent.addEventListener("click", copyPassword);

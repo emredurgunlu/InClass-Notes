@@ -15,6 +15,7 @@ const addItemSection = document.querySelector(".add-item");
 addItemSection.appendChild(myPar); //? add-item section'ın içine ve (her zaman)en alta p elementini ve yazısını ekler
 
 // *************** https://dev.to/ibn_abubakre/append-vs-appendchild-a4m
+// prepend() de append gibidir ama öne ekler
 
 //! Element.before()  ve Element.after() appenChild gibi aslında bir elementi DOM Tree'ye baglar ama child değil sibling bağlama olarak.
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/before

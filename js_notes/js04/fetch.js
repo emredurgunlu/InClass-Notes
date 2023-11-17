@@ -19,6 +19,9 @@ const zaman = setInterval(() => {
   }
 }, 100); // şu kadar ms'de bir periyodik olarak çalışır
 
+// To stop the execution of a setInterval() function, call the clearInterval() function with the interval ID.
+ 
+
 // let url= 'https://api.github.com/users'
 let url = "https://randomuser.me/api/";
 fetch(url)
