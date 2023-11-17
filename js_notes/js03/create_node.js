@@ -14,6 +14,8 @@ myPar.appendChild(text); // DOM için oluşturduğun texti oluşturduğun p elem
 const addItemSection = document.querySelector(".add-item");
 addItemSection.appendChild(myPar); //? add-item section'ın içine ve (her zaman)en alta p elementini ve yazısını ekler
 
+// *************** https://dev.to/ibn_abubakre/append-vs-appendchild-a4m
+
 //! Element.before()  ve Element.after() appenChild gibi aslında bir elementi DOM Tree'ye baglar ama child değil sibling bağlama olarak.
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/before
 addItemSection.before(myPar); //? add-item section'ın hemen üzerine myPar'i baglar. Bu satır çalışınca bi üstteki appenChild iptal oldu,
