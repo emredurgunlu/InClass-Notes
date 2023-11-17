@@ -21,3 +21,7 @@ console.log(localStorage.getItem("harvey")); // 999
 // const copyPassword = () => {
   navigator.clipboard.writeText(passwordValue.innerText); // browserdaki bir texti kopyalar
 // };
+
+//formun yapısı gereği submit butonu tıklandığında formu refresh eder ve yani sıfırlar. bunu engellemek için:
+// submitButonununEventi.preventDefault() metodu kullanılır. My Wallet App uygulamasında kullandık
+// ama formu temizlemek için ise ekleFormu.reset() metodu kullanılır
