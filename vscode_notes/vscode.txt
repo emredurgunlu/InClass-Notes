@@ -32,6 +32,16 @@ Github sayfasında noktaya basarsan vscode gibi görüntüler
 
 win tuşu + nokta = emoji 
 
+---------
+Sol alttaki settings ikonu (Manage) > Settings > sağ üstte Open Settings (json) içine
+"explorer.compactFolders": false,
+  "workbench.tree.indent": 18,
+  "workbench.colorCustomizations": {
+    "tree.indentGuidesStroke": "#FB8F1D"
+  },
+bunu kopyalarsan bir klasör içinde başka tek bir klasör varsa yanında değilde altında gösterir 
+
+--------
 
  
 
