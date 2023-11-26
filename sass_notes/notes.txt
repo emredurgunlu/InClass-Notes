@@ -29,6 +29,8 @@ _variables.scss diye bir dosya olsun. Bunun özelliklerini aynı klasörde olan 
 importla kullanılırsa değişkenler global oluyor. Farklı scss dosyalarında aynı isimde variable varsa import problem olur. Sonra gelen ezer.
 Bu nedenle import yerine use kullan.
 
+aynı dosyada hem use hem de import kullanıyorsan use'lar importların üstünde olsun
+
 @use "variables" bu şekilde use kullanırsan style.scss dosyasında değişkeni kullanmak için 
 variables.&bg-color şeklinde kullanmak gerekir
 veya
@@ -69,7 +71,30 @@ eğer sayısal değer döndüreceksen function, css stili döndüreceksen mixing
 @use 'sass:math'; sass sitesinde built-in modules başlığı altında hazır kütüphaneler  var. 
 @use 'sass:color';
 darken(#036, 30%); // rengi verilen oranda koyulaştırır
+---------------------------------
+Sass BEM notasyonu ile iyi uyumludur.
+Bem'de kapsayıcı main'e ya da section'a yada container'a blok denir.
+Bloğun içindekilere element denir.
+Element içindekilere modifier denir.
+blok__element--modifier
+product__list--button
+Eğer bunlardan biri iki kelimeden oluşuyorsa iki kelime arasına tek tre - konur:
+product-card__like-button--liked
+Örneğin eğer liked içinde de "added" gibi başka bişey varsa yani nested fazla ise artık daha fazla uzatılmaz sadece block adı altten çit tre kullanılır
+product-card__added kullanılır.(like-button ve liked yazılmaz).
+Örneğin product__list--button bunu scss ile yapımı:
+.product{
+  &__list{
+    &--button{
 
+    }
+  }
+}
+
+
+
+-----------------------------------
+Scss'de for döngüsü örneği:
 footer {
   p {
     background-color: $bannerBgColor;
@@ -130,4 +155,4 @@ footer .social-icons .social5 {
   background-color: #b30000;
   color: orange;
 }
-
+-----------------------------------
