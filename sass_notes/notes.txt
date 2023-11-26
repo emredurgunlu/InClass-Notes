@@ -1,20 +1,133 @@
-ampersant & içindeki elementi gösterir, örneğin;
+sass --watch scss/style.scss:css/style.css
+İKİ dosyayı da watch eder
+sass --watch scss/style.scss:css/style.css scss2/emre.scss:css2/emre.css
+sass --watch scss/style.scss:css/style.css emre.scss:emre.css 
+
+Scss'in css'den farkları: (derlenemek istemediğin dosya başına alttan tre koy _variables.scss)
+1-nesting yapılar
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+2-değişken tanımlama
+$base-color: #c6538c;
+$border-dark: rgba($base-color, 0.88);
+3-ampersant & içindeki elementi gösterir, örneğin;
 div{
     color:blue;
     &:hover{
         color:yellow;
     }
 }
-import ederken dosya önüne tri spnuna .scss koyma. 
-use "colors" as c
+4-
+_variables.scss diye bir dosya olsun. Bunun özelliklerini aynı klasörde olan style.scss ana dosyamızda kullanak için;
+@import "variables" yazıyoruz yani başında altten tre sonunda ise .scss uzantısı olmayacak. Faklı bir klasörde ise yolu belirtmek gerekli.
 
-importla eklenirse variable'lar global oluyor. Farklı scss dosyalarında aynı isimde variable varsa import problem olur. Sonra gelen ezer.
+importla kullanılırsa değişkenler global oluyor. Farklı scss dosyalarında aynı isimde variable varsa import problem olur. Sonra gelen ezer.
 Bu nedenle import yerine use kullan.
 
-mixing vs function farkı: function değer return eder. bu nedenle function hesaplama yapıp değer döndürmek için kullanılır. Function karmaşık yapılar için for döngüsü için felan kullanılır.
-eğer css stili döndüreceksen function değil, mixing kullan
+@use "variables" bu şekilde use kullanırsan style.scss dosyasında değişkeni kullanmak için 
+variables.&bg-color şeklinde kullanmak gerekir
+veya
+@use "variables" as v
+v.&bg-color 
+veya 
+@use "variables" as * // ama bu şekilde olursa importtaki gibi birbirini ezebilir
+&bg-color
 
-sass --watch scss/style.scss:css/style.css
-İKİ dosyayı da watch eder
-sass --watch scss/style.scss:css/style.css scss2/emre.scss:css2/emre.css
-sass --watch scss/style.scss:css/style.css emre.scss:emre.css 
+--------------------------------
+
+@mixing @function @extend farkı:
+1-@mixin theme($theme: DarkGray) { // DarkGray parametresiz çağrıldığında default değeri
+  background: $theme;
+}
+
+.info { // @include ilgili mixingi çağırmak için kullanılır
+  @include theme; // veya parametreli çağırma @include theme($theme: DarkGreen);
+}
+
+@mixin order($height, $selectors...) {} // https://sass-lang.com/documentation/at-rules/mixin/
+
+2- @extend'de ise @include yerine @extend kullanıyorsun, parametre yapamıyorsun ve @mixin yerine bir kelime kullanmıyorsun, var olan sınıfları extend ediyordun.
+.header{
+  color:grey;
+} 
+.sub-header{
+  @extend .header;
+  font-size:40px;
+}
+3-
+mixing vs function farkı: function değer return eder. bu nedenle function hesaplama yapıp değer döndürmek için kullanılır.
+Function karmaşık yapılar ve for döngüsü kullanmak için kullanılır.
+eğer sayısal değer döndüreceksen function, css stili döndüreceksen mixing kullan.
+
+--------------------------------
+
+@use 'sass:math'; sass sitesinde built-in modules başlığı altında hazır kütüphaneler  var. 
+@use 'sass:color';
+darken(#036, 30%); // rengi verilen oranda koyulaştırır
+
+footer {
+  p {
+    background-color: $bannerBgColor;
+  }
+
+  .social-icons {
+    display: flex;
+
+    //? Dizi
+    $textColors: black, red, green, blue, orange;
+
+    @for $i from 1 through length($textColors) {
+      .social#{$i} { // .social1 .social2 ... çıktısı verir
+        flex: 1;
+        font-size: $i * 1rem;
+        @if $i%2 == 0 {
+          background-color: darken(yellow, $i * 3);
+        } @else {
+          background-color: darken(red, $i * 3);
+        }
+        color: nth($textColors, $i); // text color için dizinin elemanlarına eriştik
+      }
+    }}
+  } // bu for kodunun çıktısı:
+  footer p {
+  background-color: hotpink;
+}
+footer .social-icons {
+  display: flex;
+}
+footer .social-icons .social1 {
+  flex: 1;
+  font-size: 1rem;
+  background-color: #f00000;
+  color: black;
+}
+footer .social-icons .social2 {
+  flex: 1;
+  font-size: 2rem;
+  background-color: #e0e000;
+  color: red;
+}
+footer .social-icons .social3 {
+  flex: 1;
+  font-size: 3rem;
+  background-color: #d10000;
+  color: green;
+}
+footer .social-icons .social4 {
+  flex: 1;
+  font-size: 4rem;
+  background-color: #c2c200;
+  color: blue;
+}
+footer .social-icons .social5 {
+  flex: 1;
+  font-size: 5rem;
+  background-color: #b30000;
+  color: orange;
+}
+

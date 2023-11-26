@@ -42,6 +42,9 @@ Sol alttaki settings ikonu (Manage) > Settings > sağ üstte Open Settings (json
 bunu kopyalarsan bir klasör içinde başka tek bir klasör varsa yanında değilde altında gösterir 
 
 --------
+terminalde + ikonunun sağındaki aşağı oka basıp "select default profile" seçersen terminal türünü seçersin.
+---------
+
 
  
 

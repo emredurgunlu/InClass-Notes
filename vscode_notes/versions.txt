@@ -1,0 +1,3 @@
+node -v veya node --version
+sass --version
+npm -v
