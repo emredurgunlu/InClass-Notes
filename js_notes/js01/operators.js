@@ -18,6 +18,11 @@ hizmetYili >= 5 && (maas *= 1.1); // sol taraf doğru ise sağı çalıştır, s
 //! pipe
 hizmetYili >= 5 || (maas *= 1.1); // sol taraf yanlış(atanmış bir değer olmaması false) ise sağı çalıştır, soltaraf doğru ise bişey yapma
 console.log(maas);
+
+
+//change apiden gelen veriden destructure edilmiş bir değer
+<span>${change || "0"}%</span> // eğer veri gelmiş ise yazdır, gelmemiş ise (undefined ise) sıfır yazdır
+
 const gun = "Sali";
 switch (gun) {
   case 1:

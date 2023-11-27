@@ -57,7 +57,8 @@ console.log(personel.yasHesapla());
 // diger (func. expression veya declaration) yontemlerini kullan.
 
 //********************************************************
-//* JSON => Javascript Object Notation Array içindeki objelerdir
+//* JSON => Javascript Object Notation. Array içindeki objelerdir. Obje ve/veya arryalerin tırnak içinde yani string halidir json.
+// JSON.stringify() objeyi stringleştirir, JSON.parse() stringi json'a dönüştürür
 //********************************************************
 //? Objeler normalde döngüsel degildir. Ancak for-in for-of gibi donguler ile ozel metotlar yardımıyla itere edilebilirler.
 //  Json'ın objelerden üstünlüğü forEach map gibi döngü ve metadların kullanılabilmesidir

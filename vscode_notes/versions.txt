@@ -1,3 +1,32 @@
 node -v veya node --version
 sass --version
 npm -v
+npm init
+npm init -y
+npm i veya npm install
+
+-----------------------------
+VITE PROJESİ OLUŞTURMA
+
+npm create vite@latest // eğer proje adı istediğinde nokta dersen ekstra klasör oluşturmaz, bulunulan klasör içine kurar
+daha sonra yönlendirdiği gibi npm i ve npm run dev
+daha sonra localhost linkine tıkla veya "o" basıp enter bas (h enter yardım)
+uygulamayı durdurmak için "q" enter
+q ile durdurdu isen tekrar çalıştırmak için npm run dev
+projenin çıktısı npm run build ile yapılır. bu komut "dist" adında klasör oluşturur. dist içindeki dosyalar vercel'a deploy edilebilir
+node ortamlarında style dosyası html'ye link ile değil js dosyasına import ile eklenir
+npm i sass ile ilgili projeye sass yüklenir. Vite scss dosyalarına css muamelesi yapıyor, watch'a gerek kalmadı.
+
+VITE PROJESİ OLUŞTURDUKTAN SONRA GEREKSİZ KISIMLARI SİLME
+npm create vite@latest
+counter.js ve javascript.svg dosyalarını sil
+main.js içindeki herşeyi sil
+npm i sass
+scss klasörü oluştur...
+main.js'ye style.scss'i import et
+src klasörü oluştur js component dosyaları burada olsun
+ortam değişkeni için (uygulama için güvenli olması gereken sabit değişkenler) ana klasöre .env.local dosyası ekle(gizli dosyadır)
+ortam değişkeni için VITE_ ile başlayan bir değişken tanımlayabilirsin
+----------------------------
+
+
