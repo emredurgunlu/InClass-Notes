@@ -27,6 +27,7 @@ main.js'ye style.scss'i import et
 src klasörü oluştur js component dosyaları burada olsun
 ortam değişkeni için (uygulama için güvenli olması gereken sabit değişkenler) ana klasöre .env.local dosyası ekle(gizli dosyadır)
 ortam değişkeni için VITE_ ile başlayan bir değişken tanımlayabilirsin
+https://crypto-coin-app-emre.netlify.app/ sitesinde f12 > ağ > fetch/XHR > herhangi bir coin ekle > gelen satırı seç > üstbilgiler en aşağıda token yine görünür
 ----------------------------
 
 
