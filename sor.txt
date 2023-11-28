@@ -5,7 +5,5 @@ https://www.w3schools.com/html/html5_serversentevents.asp SSE nedir (SSE) allow 
 
 https://www.w3schools.com/html/html5_webworkers.asp webworkers nedir?
 
-https://www.w3schools.com/html/html5_webstorage.asp hook fonksyonları daha mı iyi?
-
 https://www.w3schools.com/html/html5_draganddrop.asp js ile drag nasıl?
 

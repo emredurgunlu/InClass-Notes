@@ -1,12 +1,36 @@
+3 şekilde react projesi oluşturabilirsin:
+1- standart npm
+npx create-react-app my-app (proje adı yerine nokta koyarsan ekstra klasör oluşturmaz)
+npm start
+npm install (eğer paket yüklediysen)
+
+2- yarn ile
+yarn create react-app my-app
+yarn start
+yarn install (eğer paket yüklediysen)
+
+3- Vite ile
+npm create vite@latest
+(devamı yarn veya npm ile)
+
+-----------------------------
+BAZI GENEL KOMUTLAR
 node -v veya node --version
 sass --version
 npm -v
-npm init
-npm init -y
-npm i veya npm install
+yarn -v
+npm view react version
 
+npm install -g yarn
+npm install -g sass
+
+npm ls -g global olarak yüklü olan paketleri gösterir
+npm ls projede yüklü olan paketleri gösterir
+
+npm init vanilla node ortamında proje başlatır package.json dosyasını oluştur
+npm init -y dosya adı vs default atar
 -----------------------------
-VITE PROJESİ OLUŞTURMA
+VITE JS PROJESİ OLUŞTURMA
 
 npm create vite@latest // eğer proje adı istediğinde nokta dersen ekstra klasör oluşturmaz, bulunulan klasör içine kurar
 daha sonra yönlendirdiği gibi npm i ve npm run dev
@@ -15,10 +39,10 @@ uygulamayı durdurmak için "q" enter
 q ile durdurdu isen tekrar çalıştırmak için npm run dev
 projenin çıktısı npm run build ile yapılır. bu komut "dist" adında klasör oluşturur. dist içindeki dosyalar vercel'a deploy edilebilir
 node ortamlarında style dosyası html'ye link ile değil js dosyasına import ile eklenir
-npm i sass ile ilgili projeye sass yüklenir. Vite scss dosyalarına css muamelesi yapıyor, watch'a gerek kalmadı.
+"npm i sass" ile ilgili projeye sass yüklenir. Vite scss dosyalarına css muamelesi yapıyor, watch'a gerek kalmadı.
+"npm install -g sass" global olarak yükler
 
 VITE PROJESİ OLUŞTURDUKTAN SONRA GEREKSİZ KISIMLARI SİLME
-npm create vite@latest
 counter.js ve javascript.svg dosyalarını sil
 main.js içindeki herşeyi sil
 npm i sass
@@ -28,5 +52,3 @@ src klasörü oluştur js component dosyaları burada olsun
 ortam değişkeni için (uygulama için güvenli olması gereken sabit değişkenler) ana klasöre .env.local dosyası ekle(gizli dosyadır)
 ortam değişkeni için VITE_ ile başlayan bir değişken tanımlayabilirsin
 ----------------------------
-
-

@@ -44,6 +44,8 @@ bunu kopyalarsan bir klasör içinde başka tek bir klasör varsa yanında deği
 --------
 terminalde + ikonunun sağındaki aşağı oka basıp "select default profile" seçersen terminal türünü seçersin.
 ---------
+reactte p enter yaptığında <p></p> otomatik yapması için settings > emmet diye arat > emmet include languages bölümüne > item: javascript value: javascriptreact ekle 
+---------
 
 
  
