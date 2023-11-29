@@ -9,20 +9,20 @@ function yazdir(lang = "Hello", name = "noname") {
 }
 
 /* -------------------------------------------------------------------------- */
-/*                               Arrow Function                               */
+/*                               Arrow Function (FATARROW)                    */
 /* -------------------------------------------------------------------------- */
 // Arrow Function hoisted olmaz
 // yaz2(); //error
 const yaz2 = () => console.log("Hello JS");
 yaz2();
 
-const kareAl = (num) => num * num;
+const kareAl = (num) => num * num; // tek değişken varsa num'ı parantez içine almasan da olur ama kaydedince prettier otomatik parantez atıyor
 console.log("Kare:", kareAl(4));
 
 //? arrow fonksiyonlarda eger fonksiyon birden fazla islem icerirse
 //? o zaman süslü parantez kullanilmasi gerekmektedir.
 //? Süslü parantez kullanildiginda arrow fonksiyonlarinin otomatik
-//? returning ozelligi kaybolour. Bu sebeple eger donus isteniyorsa
+//? returning ozelligi kayboluyor. Bu sebeple eger donus isteniyorsa
 //? return kullanilmalidir.
 const hesapla = (x, y) => {
   const toplam = x + y;

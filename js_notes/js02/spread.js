@@ -62,10 +62,13 @@ console.log("**************************");
 
 //? Kopyalama Spread ile yapilirsa derin kopyalama olur ve birbirinden etkilenmezler
 //? (ISTISNA: Eger dizide nesting (içiçe veri) varsa onlar icin sig kopyalama gibi calisir.)
-//? Tamamen Deep Kopyalama icin JSON.stringfy() - JSON.parse() veya structuredClone() https://www.builder.io/blog/structured-clone
+//? Tamamen Deep Kopyalama icin JSON.stringify() - JSON.parse() veya structuredClone()
+//  https://www.builder.io/blog/structured-clone
+// https://dev.to/samanthaming/how-to-deep-clone-an-array-in-javascript-3cig
 ciftler = [2, 4, 6];
 tekler = [1, 3, 5];
 const yeniArraySpread = [...ciftler];
+// veya const yeniArraySpread = Array.from(ciftler);
 console.log(yeniArraySpread, ciftler);
 ciftler.push(8);
 console.log(yeniArraySpread, ciftler);

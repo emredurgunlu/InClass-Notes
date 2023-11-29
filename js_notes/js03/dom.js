@@ -11,12 +11,13 @@ console.log("getElementById('header')", header);
 // 1. ayrı ayrı
 // header.style.backgroundColor = "green"
 // header.style.color = "white"
+// document.getElementById("myImage").src="pic_bulboff.gif";
 
 // 2. css gibi. bu daha iyi
 // header.style =
 //   "background-color:green; color:white; font-size:20px; font-family:Tahoma";
 
-// 3.'sü en iyi yöntem. css'de yaptığıın sınıf içinde olsun stil. Js'den bu sınıfı aktif veya deaktif et.
+// 3.'sü en iyi yöntem. css'de yaptığın sınıf içinde olsun stil. Js'den bu sınıfı aktif veya deaktif et.
 
 //* Text elemanin icerigini okuma
 const h2 = document.getElementById("add-new-item");
