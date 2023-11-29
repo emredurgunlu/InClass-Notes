@@ -74,3 +74,22 @@ ciftler.push(8);
 console.log(yeniArraySpread, ciftler);
 yeniArraySpread.push(10);
 console.log(yeniArraySpread, ciftler);
+
+// let ciftler = [2, 4, 6];
+// function aa([...yeniSayilar]) { // derin kopyalama 
+//   console.log(yeniSayilar, ciftler);
+//   ciftler.push(8);
+//   console.log(yeniSayilar, ciftler);
+//   yeniSayilar.push(10);
+//   console.log(yeniSayilar, ciftler);
+// }
+// aa(ciftler);
+
+// function aa(yeniSayilar) { // sığ kopyalama 
+//   console.log(yeniSayilar, ciftler);
+//   ciftler.push(8);
+//   console.log(yeniSayilar, ciftler);
+//   yeniSayilar.push(10);
+//   console.log(yeniSayilar, ciftler);
+// }
+// aa(ciftler);
