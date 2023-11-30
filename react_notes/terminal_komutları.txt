@@ -6,8 +6,9 @@ npm install (eğer paket yüklediysen)
 
 2- yarn ile
 yarn create react-app my-app
+yarn add sass
+yarn install veya sadece yarn (eğer paket yüklediysen)
 yarn start
-yarn install (eğer paket yüklediysen)
 
 3- Vite ile
 npm create vite@latest
