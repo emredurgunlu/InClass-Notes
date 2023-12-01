@@ -46,6 +46,7 @@ terminalde + ikonunun sağındaki aşağı oka basıp "select default profile" s
 ---------
 reactte p enter yaptığında <p></p> otomatik yapması için settings > emmet diye arat > emmet include languages bölümüne > item: javascript value: javascriptreact ekle 
 ---------
+ VScode'da Çark simgesinden "Settings" kısmına girip arama çubuğunda quick yazarsınız ve Soldaki menüden Quick Suggestion kısmına gelirseniz göreceksiniz ki orada String önerileri off durumdadır. O'nu On yaparsanız sizlerde de backthick içerisinde öneriler çıkacaktır
 
 
  

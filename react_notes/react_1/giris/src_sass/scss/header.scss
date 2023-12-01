@@ -1,0 +1,6 @@
+@import "./variables";
+// import edeceğin dosyaların başına _ koy _variables.scss gibi ama eğer import etmeyeceksen başına _ koyma header.scss gibi yoksa hata verir
+header {
+  padding: 2rem;
+  background-color: $paleta-pastel-1;
+}
