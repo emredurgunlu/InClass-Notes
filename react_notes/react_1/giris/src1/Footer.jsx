@@ -1,3 +1,5 @@
+// indexed.js hariç jsx dosya adları ve fnksyon adları büyük harfle başlamalı
+
 // import React from 'react' bu satırı react version 17 sonrası için sil
 
 // rafc emmet //* Named export ile paylasima acildi import { Main } from "./Main"

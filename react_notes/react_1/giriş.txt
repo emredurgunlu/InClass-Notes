@@ -1,1 +1,0 @@
-// indexed.js hariç dosya adları ve fnksyon adları büyük harfle başlamalı
