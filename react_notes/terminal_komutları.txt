@@ -3,12 +3,14 @@
 npx create-react-app my-app (proje adı yerine nokta koyarsan ekstra klasör oluşturmaz)
 npm start
 npm install (eğer paket yüklediysen)
+npm run build
 
 2- yarn ile
 yarn create react-app my-app
 yarn add sass
-yarn install veya sadece yarn (eğer paket yüklediysen)
+yarn (yarn install)
 yarn start
+yarn build
 
 3- Vite ile
 npm create vite@latest
