@@ -18,7 +18,10 @@ https://www.flaticon.com/
 
 Kodlar:
 https://gist.github.com/bschwartz757/5d1ff425767fdc6baedb4e5d5a5135c8
+https://dev.to/chideracode/react-hooks-a-comprehensive-guide-to-managing-state-and-handling-side-effects-2023-47mh
 
 Renkler:
 https://color.adobe.com/es/search?q=paleta%20pastel
 
+Tools:
+https://transform.tools/html-to-jsx
