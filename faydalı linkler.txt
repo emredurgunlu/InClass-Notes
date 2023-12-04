@@ -19,6 +19,9 @@ https://www.flaticon.com/
 Kodlar:
 https://gist.github.com/bschwartz757/5d1ff425767fdc6baedb4e5d5a5135c8
 
+stackoverflow:
+https://stackoverflow.com/questions/52705335/will-using-uuid-to-as-list-keys-cause-unnecessary-re-renders-in-react
+
 Renkler:
 https://color.adobe.com/es/search?q=paleta%20pastel
 
