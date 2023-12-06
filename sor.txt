@@ -7,3 +7,7 @@ https://www.w3schools.com/html/html5_webworkers.asp webworkers nedir?
 
 https://www.w3schools.com/html/html5_draganddrop.asp js ile drag nasıl?
 
+Bir component dosyasında component fonksyonunun üzerinde js kodu yazmamızın kötü bir tarafı var mı? Her renderda tekrar tanımlanmasını istemediğimiz değişkeni burada tanımlayabilir miyiz?
+
+Başka bir komponente parametre olarak fonksyon gönderirsek ama bu fonksyon tanımlandığı yerdeki scopedaki bir değişkeni kullanıyorsa....
+
