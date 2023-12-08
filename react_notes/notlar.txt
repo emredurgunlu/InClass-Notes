@@ -1,0 +1,114 @@
+{/* Eger bir event fonksiyonunun paremetresi olmasi gerekiyorsa
+      bu fonksiyon bir arrow fonks. tarafindan  cagrilmalidir. Aksi
+      takdirde event fonksiyonu event gerceklesmeden cagirilir */}
+      <button onClick={() => handleSil(message)}>Sil</button>
+<button onClick={handleTikla}>Sil</button>
+
+// aşağıdaki kodda her butonun counterı müstakil olur
+
+import { useState } from 'react';
+
+export default function MyApp() {
+  return (
+    <div>
+      <h1>Counters that update separately</h1>
+      <MyButton /> 
+      <MyButton />
+    </div>
+  );
+}
+
+function MyButton() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Clicked {count} times
+    </button>
+  );
+}
+
+-----------------------------
+
+// aşağıdaki kodda  her butonun counterı müstakil olmaz, ortak counter olur
+
+import { useState } from 'react';
+
+export default function MyApp() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <div>
+      <h1>Counters that update together</h1>
+      <MyButton count={count} onClick={handleClick} />
+      <MyButton count={count} onClick={handleClick} />
+    </div>
+  );
+}
+
+function MyButton({ count, onClick }) {
+  return (
+    <button onClick={onClick}>
+      Clicked {count} times
+    </button>
+  );
+}
+
+-----------------------------
+
+  const [kisi, setKisi] = useState({
+    ad: "Canan",
+    meslek: "Developer",
+    yas: 22,
+    maas: 50000,
+  });
+
+        setKisi({
+        ad: "Ali",
+        meslek: "Tester",
+        yas: 42,
+        maas: 100000,
+      });
+setKisi({ ...kisi, ad: "Mehmet" });
+setKisi({ ...kisi, yas: kisi.yas + 1 })
+
+-----------------------------
+
+    e.preventDefault() ilgili eventin normal davranışını engelliyor
+
+-----------------------------
+
+  const [data, setData] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+
+    const handleData = (e) => {
+    //? objemizin key Degerinin degisken olmasını saglamak için square bracket yontemi ile e.target.id parametresini kullandik
+    setData({ ...data, [e.target.name]: e.target.value })
+  }
+            <Form.Control
+            type="text"
+            placeholder="Username"
+            onChange={handleData}
+            value={username || ""}
+            id="username"
+            name="username" // burayı e.target.name ile alıp key olarak atıyoruz
+            required
+          />
+
+-----------------------------
+
+if (e.key.match(/[0-9]/)) {
+      e.preventDefault();
+      alert("Buraya rakam girilemez")
+}
