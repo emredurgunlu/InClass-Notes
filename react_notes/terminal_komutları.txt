@@ -1,3 +1,5 @@
+There should be only one lock file package-lock.json or yarn.lock to deploy the product
+
 3 şekilde react projesi oluşturabilirsin:
 1- standart npm
 npx create-react-app my-app (proje adı yerine nokta koyarsan ekstra klasör oluşturmaz)
