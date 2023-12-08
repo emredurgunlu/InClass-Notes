@@ -1,14 +1,27 @@
+import Callback from "./Callback";
 import Photo from "./Photo";
+import { useState } from "react";
 // props için bak:
 // https://github.com/emredurgunlu/Products-List/blob/master/src/components/products/ProductsList.jsx
 // Bunu aşağıdaki linkte arat (bu dosyada allta children kullanımına örnek de var): 
 // When you nest content inside a JSX tag, the parent component will receive that content in a prop called children
 // https://react.dev/learn/passing-props-to-a-component
 const Card = ({ name, tel = 512, src }) => { // tel = 512 değer gelmezse default value
+  const [deneme, setDeneme] = useState("deneme_basarisiz");
+  let deneme2 = 10;
+  const handleChange = (e) => {
+    setDeneme(e);
+    //! set metodları asenkron olarak çalışır. fonksiyon içinde update edilmiş state'e anlık olarak ulaşamayız
+    console.log("deneme", deneme);
+    deneme2 += 2;
+    console.log("deneme2", deneme2);
+  };
+  console.log("deneme", deneme);
   return (
     <div>
       <h2>Hello {name}</h2>
       <Photo src={src} />
+      <Callback handleChange={handleChange} />
       <p>Telephone: {tel}</p>
     </div>
   )
