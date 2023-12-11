@@ -9,7 +9,6 @@ npm run build
 
 2- yarn ile
 yarn create react-app my-app
-yarn add sass
 yarn (yarn install)
 yarn start
 yarn build
@@ -17,6 +16,12 @@ yarn build
 3- Vite ile
 npm create vite@latest
 (devamı yarn veya npm ile)
+
+npm install
+yarn add sass
+yarn add axios
+yarn add react-bootstrap bootstrap
+yarn add @reduxjs/toolkit react-redux
 
 -----------------------------
 BAZI GENEL KOMUTLAR
