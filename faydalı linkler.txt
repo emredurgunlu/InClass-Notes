@@ -15,6 +15,7 @@ https://www.gratispng.com/
 https://cdnjs.com/libraries/font-awesome
 https://fontawesome.com/icons
 https://www.flaticon.com/
+https://react-icons.github.io/react-icons/    yarn add react-icons     https://www.npmjs.com/package/react-icons
 
 Kodlar:
 https://gist.github.com/bschwartz757/5d1ff425767fdc6baedb4e5d5a5135c8
