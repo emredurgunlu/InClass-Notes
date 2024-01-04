@@ -20,6 +20,8 @@ https://react-icons.github.io/react-icons/    yarn add react-icons     https://w
 Kodlar:
 https://gist.github.com/bschwartz757/5d1ff425767fdc6baedb4e5d5a5135c8
 https://dev.to/chideracode/react-hooks-a-comprehensive-guide-to-managing-state-and-handling-side-effects-2023-47mh
+https://developer.mozilla.org/en-US/docs/Web/API/structuredClone
+https://www.builder.io/blog/structured-clone
 
 stackoverflow:
 https://stackoverflow.com/questions/52705335/will-using-uuid-to-as-list-keys-cause-unnecessary-re-renders-in-react
@@ -29,3 +31,19 @@ https://color.adobe.com/es/search?q=paleta%20pastel
 
 Tools:
 https://transform.tools/html-to-jsx
+
+Browser Özellik Sorgulama:
+https://caniuse.com/css-media-range-syntax
+
+BEM notasyonu:
+https://getbem.com/introduction/
+
+Web sayfası performans ölçme:
+https://pagespeed.web.dev/ 
+
+Bu iki siteden çeşitli cihazların gerçek pixelleri (resolution) ve viewport pixelleri (css için) bakılabilir
+https://viewportsizer.com/devices/
+https://yesviz.com/mobiles.php
+Bu siteden ise hangi cihazdan bu siteyi açmışsanız o cihazın özelliklerine bakılabiliyor:
+https://www.mydevice.io/#
+Ayrıca devtoolsdan düzenleye tıklarsanız farklı cihazları ekleyip çıkartabilirsiniz
