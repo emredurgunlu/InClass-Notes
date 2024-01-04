@@ -112,3 +112,7 @@ if (e.key.match(/[0-9]/)) {
       e.preventDefault();
       alert("Buraya rakam girilemez")
 }
+
+-----------------------------
+
+Eğer CDN linki kullanacaksan bunu public klasörü içinde index.html içinde kullanabilirsin
