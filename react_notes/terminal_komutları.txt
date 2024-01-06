@@ -34,6 +34,13 @@ npm view react version
 npm install -g yarn
 npm install -g sass
 
+npm i react-router-dom (son versionu yükler)
+npm install react-router@6.3 (seçtiğin versiyonu yükler)
+yarn add react-router-dom
+yarn add react-router-dom@6.3
+
+https://react-bootstrap.netlify.app/docs/getting-started/introduction/
+
 npm ls -g global olarak yüklü olan paketleri gösterir
 npm ls projede yüklü olan paketleri gösterir
 
