@@ -65,3 +65,50 @@ function App() {
 }
 
 export default App
+
+
+/* 
+Anthony - Instructor
+  1 hour ago
+'Absolute Path' ve 'Relative Path' terimleri, React Router DOM bağlamında doğru şekilde kullanılmamaktadır. React Router DOM'da, yolları tanımlamak için 'yol' prop'u kullanılır ve yol yolunun ne kadar spesifik olduğunu belirler.
+Route path='search' element={ Home/ } / : Bu rota tanımı, 'arama' yol segmentine sahip herhangi bir URL ile eşleşir. '/search' ile başlayan herhangi bir URL ile eşleşir (ör. '/search/results', '/search/users', vb.).
+Route path='/search' element={ Home/ } / : Bu rota tanımı yalnızca tam '/search' URL'si ile eşleşir. Yalnızca '/search' ile tam olarak eşleşen URL'lerle eşleşir ve '/search/results' veya '/search/users' gibi daha spesifik alt yollarla eşleşmez.
+React Router DOM'da, başında '/' karakteri olan bir 'yol' pervanesi, köke göre “absolute path”i temsil eder. Başında '/' karakteri olmayan 'yol' öğeleri, geçerli URL'ye dayalı “relative path”i temsil eder.
+Nested routelarda alt yollar relative path ile tanımlandığında path kısmında üst yolu belirtmemize gerek kalmaz.
+```jsx
+<Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="register" element={<Register />} />
+        <Route path="stock" element={<PrivateRouter />}>
+          <Route path="" element={<Dashboard />}>
+            <Route index element={<Home />} />
+            <Route path="purchases" element={<Purchases/>} />
+            <Route path="sales" element={<Sales/>} />
+            <Route path="products" element={<Products/>} />
+            <Route path="firms" element={<Firms/>} />
+            <Route path="brands" element={<Brands/>} />
+          </Route>
+        </Route>
+      </Routes>
+    </Router>
+```
+Ama nested routelarda alt yollarıda absolute path ile tanımlamak istersek o zaman path kısmında üst yolu da açık bir şekilde belirtmeliyiz:
+```jsx
+<Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/stock" element={<PrivateRouter />}>
+          <Route path="" element={<Dashboard />}>
+            <Route index element={<Home />} />
+            <Route path="/stock/purchases" element={<Purchases />} />
+            <Route path="/stock/sales" element={<Sales />} />
+            <Route path="/stock/products" element={<Products />} />
+            <Route path="/stock/firms" element={<Firms />} />
+            <Route path="/stock/brands" element={<Brands />} />
+          </Route>
+        </Route>
+      </Routes>
+    </Router>
+*/
