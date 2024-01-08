@@ -5,6 +5,7 @@ const Nav = () => {
   return (
     <ul>
       <li>
+        {/* Link yerine NavLink kullanırsak active sınıf özelliğini kullanabiliriz (bak App.css) */}
         <NavLink to="/">Home</NavLink>
       </li>
       <li>

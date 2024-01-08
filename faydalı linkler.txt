@@ -54,4 +54,10 @@ React bu şekilde key={Math.random()} rastgele key istemediği gibi mümkünse i
 Eğer veri databaseden geliyorsa zaten idsi vardır ama veri databaseden gelmiyor da yerel olarak üretiliyorsa https://www.npmjs.com/package/uuid bu paket ile elemanlarına sabit olarak id atanabilir. (Bu şekilde değil key={uuid.v4()}). eğer bu şekilde olursa her renderda farklı id atanır, key={Math.random()) benzeri olmuş olur)
 Kullanım için bkz: https://stackoverflow.com/questions/52705335/will-using-uuid-to-as-list-keys-cause-unnecessary-re-renders-in-react 
 
+SEO analiz toolları:
+https://www.semrush.com/ ücretli
+https://ahrefs.com/ ücretli
+https://www.screamingfrog.co.uk/
+https://www.seobility.net/en/
+
 

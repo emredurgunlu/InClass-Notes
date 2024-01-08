@@ -15,6 +15,7 @@ const Paths = () => {
         experts!
       </p>
       <div>
+        {/* navigate("fs") Relative adresleme, nesting route yapılıyor */}
         <button className="btn btn-success w-50" onClick={() => navigate("fs")}>
           FS
         </button>

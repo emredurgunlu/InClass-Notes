@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom"
 const People = () => {
   const [people, setPeople] = useState([])
 
+  // Link veya NavLink componenti yerine navigate'i fonksyon olarak kullanabilirsin
   const navigate = useNavigate()
 
   const getPeople = () => {

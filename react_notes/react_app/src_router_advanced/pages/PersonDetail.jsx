@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import NotFound from "./NotFound"
 import spinner from "../img/Spinner-2.gif"
 const PersonDetail = () => {
+  // useParams() ile dinamik routedan gelen değişkeni yakalıyoruz
   const { idx } = useParams()
   const navigate = useNavigate()
   const [person, setPerson] = useState([])
