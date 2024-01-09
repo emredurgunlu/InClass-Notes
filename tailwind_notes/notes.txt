@@ -1,0 +1,55 @@
+Component Linkleri:
+https://nerdcave.com/tailwind-cheat-sheet
+https://tw-elements.com/
+https://flowbite.com/
+https://daisyui.com/
+https://tailwindcomponents.com/
+Eğer yukardaki sitelerden js gerektirmeyen bir component alacaksan direkt kodu kopyala yapıştır
+Ama js gerektiren bir component alacaksan bu kütüphaneyi sisteme dahil etmen gerekir. 
+İlgili sitenin yükleme bölümünde nasıl yapılacağı yazar. (tailwind.config.js içinde plugins içine ve ekstra content olarak ilgili kısmı kopyala yapıştır yapman gerek ve index.js içine import etmen gerek) 
+
+https://tailwindui.com/components orjinal tailwind componentleri
+https://tailwindui.com/documentation#react-installing-dependencies
+npm install @headlessui/react(js tarafı için) @heroicons/react(ikonlar için) https://heroicons.com/
+
+Dark Mode:
+https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually
+tailwind.config içine darkMode: 'class', ekle
+
+TEMA:
+https://tailwindcss.com/docs/theme#extending-the-default-theme
+direkt theme içine koyarsan tailwindin default ayarını override eder ama theme içine extend içinde koyarsan tailwind default ayarını bozmadan kendi ayarlarını eklemiş olursun
+tema tailwind.config içine konuyor
+
+Yükleme:
+https://tailwindcss.com/docs/installation/framework-guides
+https://tailwindcss.com/docs/guides/create-react-app
+
+yarn add -D tailwindcss //-D package.json içinde dev_dependency kısmına ekliyor, build olunca proje gereksiz şişmemiş oluyor
+npx tailwindcss init //tailwind.config.js dosyası oluşturuyor
+Bu alttaki kısmı tailwind.config.js içine yapıştır
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+Bu alttaki kısmı index.css içine ekle
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+className="text-[#A1EEBD]"
+className="text-[rgba(73,163,186,0.886)]" custom renkler verebilirsin
+
+className="line-clamp-2" 2.satır sonrasını 3 nokta ile bitirir
+
+className="w-1/2" className="w-[300px]" className="max-w-lg min-w-[100px]"
+
+hover:bg-sky-500 focus:ring-4 focus:ring-yellow
+
+önceki sibling elemente peer classı verirsen sonraki sibling elemente invisible peer-invalid:visible verebilirsin
