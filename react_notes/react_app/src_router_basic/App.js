@@ -12,6 +12,7 @@ function App() {
     <>
       <Nav />
       <Routes>
+        // <Route index element={<Home />} /> index ve path="/" aynı şey
         <Route path="/" element={<Home />} />
         <Route path="/inst" element={<Instructors />} />
         <Route path="/contact" element={<Contact />} />
