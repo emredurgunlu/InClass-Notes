@@ -2,6 +2,7 @@ Component Linkleri:
 https://nerdcave.com/tailwind-cheat-sheet
 https://tw-elements.com/
 https://flowbite.com/
+https://www.flowbite-react.com/
 https://daisyui.com/
 https://tailwindcomponents.com/
 Eğer yukardaki sitelerden js gerektirmeyen bir component alacaksan direkt kodu kopyala yapıştır
