@@ -2,8 +2,11 @@ Component Linkleri:
 https://nerdcave.com/tailwind-cheat-sheet
 https://tw-elements.com/
 https://flowbite.com/
-https://www.flowbite-react.com/
-https://daisyui.com/
+https://www.flowbite-react.com/  yükleme gerektiriyor
+https://daisyui.com/    yükleme gerektiriyor
+https://www.hyperui.dev/  yükleme gerektirmiyor kodu kopyala kullan
+https://floatui.com/      yükleme gerektirmiyor kodu kopyala kullan
+https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation    yükleme gerektirmiyor kodu kopyala kullan
 https://tailwindcomponents.com/
 Eğer yukardaki sitelerden js gerektirmeyen bir component alacaksan direkt kodu kopyala yapıştır
 Ama js gerektiren bir component alacaksan bu kütüphaneyi sisteme dahil etmen gerekir. 
