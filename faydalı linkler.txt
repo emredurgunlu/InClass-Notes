@@ -17,6 +17,9 @@ https://fontawesome.com/icons
 https://www.flaticon.com/
 https://react-icons.github.io/react-icons/    yarn add react-icons     https://www.npmjs.com/package/react-icons
 
+React Kütüphaneleri:
+https://fkhadra.github.io/react-toastify/introduction
+
 Kodlar:
 https://gist.github.com/bschwartz757/5d1ff425767fdc6baedb4e5d5a5135c8
 https://dev.to/chideracode/react-hooks-a-comprehensive-guide-to-managing-state-and-handling-side-effects-2023-47mh
