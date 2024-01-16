@@ -19,6 +19,8 @@ https://react-icons.github.io/react-icons/    yarn add react-icons     https://w
 
 React Kütüphaneleri:
 https://fkhadra.github.io/react-toastify/introduction
+https://formik.org/
+https://www.npmjs.com/package/yup
 
 Kodlar:
 https://gist.github.com/bschwartz757/5d1ff425767fdc6baedb4e5d5a5135c8
