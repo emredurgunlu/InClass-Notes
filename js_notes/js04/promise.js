@@ -1,3 +1,5 @@
+//* https://www.javascripttutorial.net/es6/javascript-promise-all/
+
 //* 1- Ilk olarak new Promise() constructor'i ile yeni bir promise nesnesi olusturulur,
 //* 2- constructor'a asil islemin yapilmasini saglayan bir executor fonksiyion verilir.
 //* 3- Executor fonksiyona ise 2 argument gecirilir: resolve ve reject fonksiyonlari
