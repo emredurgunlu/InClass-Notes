@@ -22,6 +22,20 @@ https://fkhadra.github.io/react-toastify/introduction
 https://formik.org/
 https://react-hook-form.com/ (formik alternatifi)
 https://www.npmjs.com/package/yup
+https://gsap.com/ 
+https://www.framer.com/motion/
+https://react.i18next.com/
+https://recharts.org/en-US/
+https://www.tremor.so/
+https://primereact.org/
+https://www.syncfusion.com/sales/communitylicense
+https://ej2.syncfusion.com/home/react.html#platform
+https://www.npmjs.com/package/redux-offline
+https://www.npmjs.com/package/redux-persist
+
+UI siteleri:
+https://neumorphism.io/#e0e0e0
+https://uiverse.io/
 
 Kodlar:
 https://gist.github.com/bschwartz757/5d1ff425767fdc6baedb4e5d5a5135c8
@@ -43,6 +57,15 @@ https://caniuse.com/css-media-range-syntax
 
 BEM notasyonu:
 https://getbem.com/introduction/
+
+Debounce:
+https://asnus.com/posts/debounce-nedir-ve-nasil-kullanilir/
+
+HTTP Headers
+https://www.sempeak.com/blog/http-headers-nedir-ve-neden-onemlidir#:~:text=kullan%C4%B1c%C4%B1%20deneyimini%20geli%C5%9Ftirebilir.-,HTTP%20Response%20Headers%20(HTTP%20Yan%C4%B1t%20Ba%C5%9Fl%C4%B1klar%C4%B1),gereken%20i%C3%A7eri%C4%9Fi%20nas%C4%B1l%20i%C5%9Fleyece%C4%9Fini%20belirtir.
+
+HTTP Only:
+https://www.cookiepro.com/knowledge/httponly-cookie/
 
 Web sayfası performans ölçme:
 https://pagespeed.web.dev/ 
