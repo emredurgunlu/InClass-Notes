@@ -59,6 +59,9 @@ https://caniuse.com/css-media-range-syntax
 BEM notasyonu:
 https://getbem.com/introduction/
 
+Semantic Commit Messages:
+https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716
+
 Debounce:
 https://asnus.com/posts/debounce-nedir-ve-nasil-kullanilir/
 
