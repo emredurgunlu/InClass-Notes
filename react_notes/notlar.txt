@@ -1,3 +1,91 @@
+Bazı durumlarda lifting state up yaparak useState'i parent componentta oluşturman gerekebilir
+Örneğin Home componenti içinde Header, Main ve Footer componentleri olsun.
+Home içinde bir state değişkeni değiştiğinde bu 3 component da render olur
+Ama örneğin bu state değiştiğinde Header'ın tekrar render olmasına gerek olmayabilir.
+Eğer memo kullandığın halde Header içinde değişen bir state varsa memoya rağmen render olur,
+gereksiz yere memo kullanmış olursun ve bu gereksiz yere performansı düşürür
+2 şekilde kullanımı var:
+1-
+import React,{memo} from 'react'
+const HeaderMemo = memo(({ user }) => {
+  console.log("Render => HeaderMemo componenti");
+  return <div className="text-center text-success">HeaderMemo Componenti : {user}</div>;
+});
+export default HeaderMemo
+2-
+const HeaderMemo = ({ user }) => {
+  console.log("Render => HeaderMemo componenti");
+  return <div className="text-center text-success">HeaderMemo Componenti : {user}</div>;
+};
+export default memo(HeaderMemo);
+
+Obje, array gibi non-primitive typelarda (referans tipi, bellekte adresleri tutuluyor) bir değişken tanımladığımızda veya fonksyonlarda
+Home her render olduğunda objenin değerleri değişmese bile bellekteki adresleri değişiyor, yeni adres veriliyor
+Eğer bir home içindeki bir objeyi (useState olmayan normal obje) header'a parametre olarak geçti isek 
+home'un her renderında objenin adresi değiştiği için memo bunu props değişmiş gibi algılıyor ve memo çalışmıyor
+objenin props olarak geçildiği Headerın gereksiz renderına engellemek için bu obje bir statete tutulabilir eğer
+statede tutulursa renderda objenin adresi değişmez ve memo çalışır. İkinci yöntem olarak useRef hooku kullanılabilir
+(Hafızada referansı sabit ama kendisi değişebilir olan değişkenler kullanmak istiyorsak useRef kullanabiliriz) 
+  const taxDataRef = useRef({
+    taxRate: 0.18,
+    ship: 25,
+  });
+
+useRef'in ikinci kullanım yeri DOM elementlerine erişim sağlamak içindir.
+useRef useState'deki gibi componenti render etmez
+
+const [text, setText] = useState("");
+<input type="text" value={text} onChange={e=> setText(e.target.value)} bu şekilde klavyeden her harf girişinde render olur
+<button type="button" onClick={handleClick}>Search</button>
+
+Ama aşağıdaki gibi useRef kullanırsak her harf girişinde değil sadece butona tıklanıldığında render olur
+const [text, setText] = useState("");
+const inputRef = useRef();
+
+const handleClick = () => {
+    setText(inputRef.current.value);
+    inputRef.current.value = ""; search butonuna tıkladıktan sonra inputu sıfırlamak için
+}
+<input type="text" ref={inputRef} />
+<button type="button" onClick={handleClick}>
+
+useRef ile native JS'deki gibi DOM elemanlarına erişebiliriz
+console.log(divRef.current.lastElementChild.lastElementChild.innerText); 
+
+
+sayfa ilk açıldığında inputa focuslanır:
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
+
+---------------
+eğer search dolu string ise içerip içermediğine bakar ama eğer boş string ise tüm ürünleri gösterir
+(dolu string boş stringi include eder)
+  const filteredData = data.filter(product =>
+    product.title.toLowerCase().includes(search.toLowerCase())
+  );
+
+filteredData'yı bir Card componenta props olarak geçtiğini düşün.
+inputa onChange oldukça parent component render olacak. filteredData değişmese bile 
+referans tip olduğu için Card gereksiz yere render olacak. referans tip olduğu için memo işe yaramayacak
+useMemo hesaplamayı değil, hesaplamanın sonucunu cache'ler, yani referansı sabitler.
+Sadece Girilen dependency arraylerde bir değişiklik olursa tekrar filtreleme yapar ve Card'ı render eder. Eğer dependency arraylerde değişiklik yoksa, Card'ın parent componenti başka bir sebepten render oluyorsa useMemodan sayesinde Card gereksiz render olmaz.
+
+useCallback fonksyonu belleğe alır fakat useMemo fonksyonun return ettiği sonucu belleğe alır
+
+{/*  const handleClear = () => {
+    setSearch("");
+  }; */}
+
+  const handleClearCallback = useCallback(() => {
+    setSearch("");
+  }, []);
+
+      {/* <ClearButton handleClear={handleClear} /> Parent componentta ClearButtonu ilgilendirmeyen bir render olsa bile ClearButton tekrar render olur*/}
+      <ClearButton handleClear={handleClearCallback} ClearButton gereksiz render olmaz/>
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
 {/* Eger bir event fonksiyonunun paremetresi olmasi gerekiyorsa
       bu fonksiyon bir arrow fonks. tarafindan  cagrilmalidir. Aksi
       takdirde event fonksiyonu event gerceklesmeden cagirilir */}
