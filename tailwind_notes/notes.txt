@@ -15,6 +15,8 @@ Ama js gerektiren bir component alacaksan bu kütüphaneyi sisteme dahil etmen g
 https://tailwindui.com/components orjinal tailwind componentleri
 https://tailwindui.com/documentation#react-installing-dependencies
 npm install @headlessui/react(js tarafı için) @heroicons/react(ikonlar için) https://heroicons.com/
+yarn add @headlessui/react
+yarn add @heroicons/react
 
 Dark Mode:
 https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually
