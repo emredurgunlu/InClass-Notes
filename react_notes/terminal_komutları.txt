@@ -47,6 +47,35 @@ npm ls projede yüklü olan paketleri gösterir
 npm init vanilla node ortamında proje başlatır package.json dosyasını oluştur
 npm init -y dosya adı vs default atar
 -----------------------------
+REACT PROJESİ OLUŞTURDUKTAN SONRA GEREKSİZ KISIMLARI SİLME
+SRC içinde App.js ve index.js haricinde tüm dosyaları sil
+App.js içi:
+function App() {
+  return (
+    <div>
+      <h1>React App</h1>
+    </div>
+  );
+}
+
+export default App;
+index.js içi:
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+import App from "./App";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  // <React.StrictMode>
+  <App />
+  // </React.StrictMode>
+);
+PUBLIC içinde index.html harici tüm dosyaları sil
+index.html içinde:
+<link logo192.png satırını ve <link manifest.json  satırını ve tüm yorumları sil
+
+-----------------------------
 VITE JS PROJESİ OLUŞTURMA
 
 npm create vite@latest // eğer proje adı istediğinde nokta dersen ekstra klasör oluşturmaz, bulunulan klasör içine kurar
