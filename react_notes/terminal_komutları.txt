@@ -22,7 +22,6 @@ yarn add sass
 yarn add axios
 yarn add react-bootstrap bootstrap
 yarn add @reduxjs/toolkit react-redux
-yarn add @redux-devtools/extension
 
 -----------------------------
 BAZI GENEL KOMUTLAR
