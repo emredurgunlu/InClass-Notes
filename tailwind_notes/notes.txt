@@ -30,7 +30,8 @@ https://tailwindcss.com/docs/installation/framework-guides
 https://tailwindcss.com/docs/guides/create-react-app
 
 yarn add -D tailwindcss //-D package.json içinde dev_dependency kısmına ekliyor, build olunca proje gereksiz şişmemiş oluyor
-npx tailwindcss init //tailwind.config.js dosyası oluşturuyor
+yarn tailwindcss init //tailwind.config.js dosyası oluşturuyor (npx tailwindcss init)
+ 
 Bu alttaki kısmı tailwind.config.js içine yapıştır
 /** @type {import('tailwindcss').Config} */
 module.exports = {
