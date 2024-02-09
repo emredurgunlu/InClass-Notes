@@ -8,6 +8,7 @@ https://www.hyperui.dev/  yükleme gerektirmiyor kodu kopyala kullan
 https://floatui.com/      yükleme gerektirmiyor kodu kopyala kullan
 https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation    yükleme gerektirmiyor kodu kopyala kullan
 https://tailwindcomponents.com/
+https://v1.tailwindcss.com/components/forms
 Eğer yukardaki sitelerden js gerektirmeyen bir component alacaksan direkt kodu kopyala yapıştır
 Ama js gerektiren bir component alacaksan bu kütüphaneyi sisteme dahil etmen gerekir. 
 İlgili sitenin yükleme bölümünde nasıl yapılacağı yazar. (tailwind.config.js içinde plugins içine ve ekstra content olarak ilgili kısmı kopyala yapıştır yapman gerek ve index.js içine import etmen gerek) 
