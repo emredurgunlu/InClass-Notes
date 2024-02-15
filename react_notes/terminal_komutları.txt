@@ -76,6 +76,8 @@ index.html içinde:
 <link logo192.png satırını ve <link manifest.json  satırını ve tüm yorumları sil
 
 -----------------------------
+rm -rf .git bu komutu bash'te çalıştırırsan projede başlatılmış olan git'i kaldırır
+-----------------------------
 VITE JS PROJESİ OLUŞTURMA
 
 npm create vite@latest // eğer proje adı istediğinde nokta dersen ekstra klasör oluşturmaz, bulunulan klasör içine kurar
