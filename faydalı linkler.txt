@@ -38,6 +38,14 @@ UI siteleri:
 https://neumorphism.io/#e0e0e0
 https://uiverse.io/
 
+Tema siteleri:
+https://elements.envato.com/web-templates
+https://themewagon.com/theme-price/free/
+https://www.free-css.com/template-categories/bootstrap
+https://startbootstrap.com/themes/landing-pages
+https://www.tailwindawesome.com/?price=free
+https://creativedesignsguru.com/category/nextjs/
+
 Kodlar:
 https://gist.github.com/bschwartz757/5d1ff425767fdc6baedb4e5d5a5135c8
 https://dev.to/chideracode/react-hooks-a-comprehensive-guide-to-managing-state-and-handling-side-effects-2023-47mh
@@ -72,10 +80,7 @@ HTTP Only:
 https://www.cookiepro.com/knowledge/httponly-cookie/
 
 Open graph
-https://medium.com/@muhammederdinc/open-graph-protokol%C3%BC-nedir-2c61f1454526
-
-Web sayfası performans ölçme:
-https://pagespeed.web.dev/ 
+https://medium.com/@muhammederdinc/open-graph-protokol%C3%BC-nedir-2c61f1454526 
 
 Bu iki siteden çeşitli cihazların gerçek pixelleri (resolution) ve viewport pixelleri (css için) bakılabilir
 https://viewportsizer.com/devices/
@@ -95,5 +100,9 @@ https://www.semrush.com/ ücretli
 https://ahrefs.com/ ücretli
 https://www.screamingfrog.co.uk/
 https://www.seobility.net/en/
+
+Web sayfası performans ölçme:
+https://pagespeed.web.dev/
+https://yellowlab.tools/
 
 
