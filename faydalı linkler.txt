@@ -22,7 +22,6 @@ https://fkhadra.github.io/react-toastify/introduction
 https://formik.org/
 https://react-hook-form.com/ (formik alternatifi)
 https://www.npmjs.com/package/yup
-https://gsap.com/ 
 https://www.framer.com/motion/
 https://react.i18next.com/
 https://recharts.org/en-US/
