@@ -1,4 +1,4 @@
-saylorem2 (tab) iki kelime üretir
+lorem2 (tab) iki kelime üretir
 lorem*2 (enter) iki uzun satır üretir
 
 ul>li*5>a  devamında (ctrl+space ve enter yaparsan veya) tab basarsan kolay kullanım olur
