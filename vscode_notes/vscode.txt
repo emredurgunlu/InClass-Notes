@@ -48,6 +48,10 @@ reactte p enter yaptığında <p></p> otomatik yapması için settings > emmet d
 ---------
  VScode'da Çark simgesinden "Settings" kısmına girip arama çubuğunda quick yazarsınız ve Soldaki menüden Quick Suggestion kısmına gelirseniz göreceksiniz ki orada String önerileri off durumdadır. O'nu On yaparsanız sizlerde de backthick içerisinde öneriler çıkacaktır
 
+EXTENSIONS:
+Dart, Flutter, Live Server, Material Icon Theme, Auto Close Tag, Auto Rename Tag, Comment Divider, ES7+React/Redux/React-Native snippets, ESLint,JavaScript (ES6) code snippets, Live Sass Compiler, MongDB for VSCode, 
+Prettier - Code formatter, Sass (.sass only), Tailwind CSS IntelliSense, Thunder Client
+
 
  
 
