@@ -12,6 +12,17 @@ div {
   margin: auto;
   border: 1px solid red;
 }
+
+div .box2{ // bütün divler içinde class ı box2 olan elementler
+    color:blue;
+}
+div.box1{ // class ı box1 olan bütün divler
+    color:blue;
+}
+div.box1 .box2{ // class ı box1 olan divler içinde class ı box1 olan elementler
+    color:blue;
+}
+
 p.ex1 {
   margin: inherit; inherited from the parent element (<div>)
 }
