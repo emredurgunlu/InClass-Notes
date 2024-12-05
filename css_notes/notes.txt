@@ -13,7 +13,7 @@ div {
   border: 1px solid red;
 }
 
-div .box2{ // bütün divler içinde class ı box2 olan elementler
+div .box2{ // bütün divler içinde class ı box2 olan elementler (. yerine # ile aynısının id lisi olur)
     color:blue;
 }
 div.box1{ // class ı box1 olan bütün divler
