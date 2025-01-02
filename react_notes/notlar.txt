@@ -1,3 +1,12 @@
+
+--------------------------------------------------------------------------------------------
+Vscode ES7 Snipped:
+rafc yaparsan  arrow functionla exportlanmış component gelir.
+import React from 'react'; bunu sil gerek yok
+rafce export default kısmını farklı yapar. Bunu tercih edebilirsin.
+rfc de yapılabilir
+rfcp kullanılmıyor
+---------------------------------------------------------------------------------------------
 Bazı durumlarda lifting state up yaparak useState'i parent componentta oluşturman gerekebilir
 Örneğin Home componenti içinde Header, Main ve Footer componentleri olsun.
 Home içinde bir state değişkeni değiştiğinde bu 3 component da render olur
