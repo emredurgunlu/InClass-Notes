@@ -23,6 +23,7 @@ https://formik.org/
 https://react-hook-form.com/ (formik alternatifi)
 https://www.npmjs.com/package/yup
 https://www.framer.com/motion/
+https://cursify.vercel.app/components/springy-cursor
 https://react.i18next.com/
 https://recharts.org/en-US/
 https://www.tremor.so/
