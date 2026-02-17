@@ -2,24 +2,24 @@
 
 Bu rehber iki farklı senaryoyu içerir:
 
-1️⃣ Source kod içeren container (daha büyük boyut)
-2️⃣ Sadece build çıktısı içeren, daha küçük ve source kod içermeyen image (önerilen)
+1️⃣ Source kod içeren container (daha büyük boyut)  
+2️⃣ Sadece build çıktısı içeren, daha küçük ve source kod içermeyen image (önerilen)  
 
-🔹 SENARYO 1 — Source Kod İçeren Image
-1️⃣ Proje kökünde .dockerignore oluştur
+🔹 SENARYO 1 — Source Kod İçeren Image  
+1️⃣ Proje kökünde .dockerignore oluştur  
 
 İçeriği:
 
 node_modules
-.next
-.git
-.gitignore
-Dockerfile
-.dockerignore
-npm-debug.log
-.env*
+.next  
+.git  
+.gitignore  
+Dockerfile  
+.dockerignore  
+npm-debug.log  
+.env*  
 
-2️⃣ Proje kökünde Dockerfile oluştur
+2️⃣ Proje kökünde Dockerfile oluştur  
 
 İçeriği:
 
@@ -48,57 +48,57 @@ EXPOSE 3000
 
 CMD ["npx", "next", "start", "-H", "0.0.0.0", "-p", "3000"]
 
-3️⃣ Image oluştur
-docker build -t next-img .
+3️⃣ Image oluştur  
+docker build -t next-img .  
 
 
-Bu komut next-img adında bir image oluşturur.
+Bu komut next-img adında bir image oluşturur.  
 
-4️⃣ Image’ı dosyaya çevir (Paylaşmak için)
-docker save -o next-img.tar next-img
-
-
-Bu komut next-img.tar dosyasını üretir.
-
-5️⃣ Karşı tarafın yapacağı işlemler
-docker load -i next-img.tar
-docker run -p 3000:3000 next-img
+4️⃣ Image’ı dosyaya çevir (Paylaşmak için)  
+docker save -o next-img.tar next-img  
 
 
-Uygulama çalışır:
+Bu komut next-img.tar dosyasını üretir.  
 
-http://localhost:3000
+5️⃣ Karşı tarafın yapacağı işlemler  
+docker load -i next-img.tar  
+docker run -p 3000:3000 next-img  
 
-⚠️ Bu yöntemde:
 
-Source kodlar image içinde bulunur
+Uygulama çalışır:  
 
-Image boyutu daha büyüktür
+http://localhost:3000  
 
-node_modules tamamen içeridedir
+⚠️ Bu yöntemde:  
 
-🔹 SENARYO 2 — Source Kod İçermeyen, Küçük Boyutlu Image (ÖNERİLEN)
+Source kodlar image içinde bulunur  
 
-Bu yöntem production’a daha yakındır.
+Image boyutu daha büyüktür  
 
-1️⃣ next.config.js içine ekle
-module.exports = {
-  output: "standalone",
-};
+node_modules tamamen içeridedir  
 
-2️⃣ Aynı .dockerignore dosyası kullanılabilir
-node_modules
-.next
-.git
-.gitignore
-Dockerfile
-.dockerignore
-npm-debug.log
-.env*
+🔹 SENARYO 2 — Source Kod İçermeyen, Küçük Boyutlu Image (ÖNERİLEN)  
 
-3️⃣ Dockerfile içeriğini değiştir
-# ---------- BUILD STAGE ----------
-FROM node:20-alpine AS builder
+Bu yöntem production’a daha yakındır.  
+
+1️⃣ next.config.js içine ekle  
+module.exports = {  
+  output: "standalone",  
+};  
+
+2️⃣ Aynı .dockerignore dosyası kullanılabilir  
+node_modules  
+.next  
+.git  
+.gitignore  
+Dockerfile  
+.dockerignore  
+npm-debug.log  
+.env*  
+
+3️⃣ Dockerfile içeriğini değiştir  
+# ---------- BUILD STAGE ----------  
+FROM node:20-alpine AS builder  
 
 WORKDIR /app
 
@@ -118,23 +118,23 @@ ENV NODE_ENV=production
 
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
-COPY --from=builder /app/public ./public
+COPY --from=builder /app/public ./public  
 
-EXPOSE 3000
+EXPOSE 3000  
 
-CMD ["node", "server.js"]
+CMD ["node", "server.js"]  
 
-4️⃣ Image oluştur
-docker build -t next-standalone-img .
+4️⃣ Image oluştur  
+docker build -t next-standalone-img .  
 
-5️⃣ Paylaşmak için
-docker save -o next-standalone-img.tar next-standalone-img
+5️⃣ Paylaşmak için  
+docker save -o next-standalone-img.tar next-standalone-img  
 
-6️⃣ Karşı taraf:
-docker load -i next-standalone-img.tar
-docker run -p 3000:3000 next-standalone-img
+6️⃣ Karşı taraf:  
+docker load -i next-standalone-img.tar  
+docker run -p 3000:3000 next-standalone-img  
 
-📦 FARK TABLOSU
-Özellik	Senaryo 1	Senaryo 2 (Standalone)
-Source kod içerir	✅ Evet	❌ Hayır
-Image boyutu	Büyük	Daha küçük
+📦 FARK TABLOSU  
+Özellik	Senaryo 1	Senaryo 2 (Standalone)  
+Source kod içerir	✅ Evet	❌ Hayır  
+Image boyutu	Büyük	Daha küçük  
