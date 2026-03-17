@@ -1,0 +1,65 @@
+https://github.com/OCA/account-financial-tools.git
+https://github.com/Odoo-Turkey-Community/e_donusum.git
+https://github.com/OCA/currency.git
+https://github.com/OCA/l10n-turkey.git
+
+Adım 1: Klasör Oluştur
+odoo-turkiye adında yeni bir klasör oluştur, içinde terminal aç.
+
+Adım 2: Modülleri İndir
+Sırayla şu 4 komutu çalıştır:
+git clone -b 18.0 https://github.com/Odoo-Turkey-Community/e_donusum.git addons/e_donusum
+git clone -b 18.0 https://github.com/OCA/account-financial-tools.git addons/account-financial-tools
+git clone -b 18.0 https://github.com/OCA/currency.git addons/currency
+git clone -b 18.0 https://github.com/OCA/l10n-turkey.git addons/l10n-turkey
+
+Adım 3: odoo.conf Dosyası Oluştur
+odoo-turkiye klasörünün içinde odoo.conf adında dosya oluştur, içine yapıştır:
+[options]
+addons_path = /mnt/extra-addons/e_donusum,/mnt/extra-addons/account-financial-tools,/mnt/extra-addons/currency,/mnt/extra-addons/l10n-turkey,/usr/lib/python3/dist-packages/odoo/addons
+
+Adım 4: docker-compose.yml Oluştur
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
+      POSTGRES_DB: postgres
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  odoo:
+    image: odoo:18.0
+    user: root
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+    volumes:
+      - ./addons/e_donusum:/mnt/extra-addons/e_donusum
+      - ./addons/account-financial-tools:/mnt/extra-addons/account-financial-tools
+      - ./addons/currency:/mnt/extra-addons/currency
+      - ./addons/l10n-turkey:/mnt/extra-addons/l10n-turkey
+      - ./odoo.conf:/etc/odoo/odoo.conf
+      - odoo-data:/var/lib/odoo
+    environment:
+      HOST: db
+      USER: odoo
+      PASSWORD: odoo
+
+volumes:
+  db-data:
+  odoo-data:
+
+Adım 5: Başlat
+docker compose up -d
+
+http://localhost:8069 adresini aç.
+
+-------------------
+Ne hatası verdiğini görmek için:
+docker logs odoo-turkiye-odoo-1 --tail 30
+
+-v bayrağı container'larla birlikte volume'ları da siler. Sonra tekrar başlat:
+docker compose down -v
