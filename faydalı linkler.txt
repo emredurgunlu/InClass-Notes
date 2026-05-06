@@ -117,6 +117,7 @@ https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=tr
 Google Rich Snippets ve Knowledge Panel ve JSON-LD
 https://trends.google.com/trends/
 
-
+FlashBellek sağlık kontrolü:
+https://blog.7datarecovery.com/tr/check-usb-drive/
 
 
